@@ -15,7 +15,7 @@ end
 
 
 function function_with_my_code()
-	if player_action_is_pressed("CBA_OFC_ATTACK_PRIMARY") and inv_item_is_equipped("haarp", LOCAL_PLAYER)then
+	if player_action_is_pressed("CBA_OFC_ATTACK_PRIMARY") and inv_item_is_equipped("haarp", LOCAL_PLAYER)then -- checking action in-game action "CBA_OFC_ATTACK_PRIMARY" and equipping haarp weapon
 			if TOD_COUNTER == 1 then
 					weather_changer(2,30,"blue_pd_tod_override.todx","mod_blue_pd_tod")
 				elseif TOD_COUNTER == 2 then
