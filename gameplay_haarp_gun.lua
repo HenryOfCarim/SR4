@@ -1,16 +1,16 @@
 local My_Thread_Handle = INVALID_THREAD_HANDLE	-- set variable to  thread type
-local TOD_COUNTER = 0				 -- set variable
+local TOD_COUNTER = 0				 -- set variable that will be count every gun's trigger click
 
 function mod_message(hud_text_msg)	-- create new function that will be show in game message
-	mission_help_table(hud_text_msg, LOCAL_PLAYER) -- in game function that shows text message 
+	mission_help_table(hud_text_msg, LOCAL_PLAYER) -- in game function that shows text message, LOCAL_PLAYER - in-game argument for host player
 end
 
 
-function weather_changer(tod_hours,tod_minutes,tod_file,tod_msg)
-	mission_override_clear_all_temp()
-	set_time_of_day(tod_hours,tod_minutes)
-	mission_override_push_temp(tod_file)
-	mod_message(tod_msg)
+function weather_changer(tod_hours,tod_minutes,tod_file,tod_msg) -- my function that will be changing ToD
+	mission_override_clear_all_temp() -- in game function that will be clear all temporally settings
+	set_time_of_day(tod_hours,tod_minutes) -- in game function that set time of day
+	mission_override_push_temp(tod_file) -- in game function that sets temporal setting, tod file in our case
+	mod_message(tod_msg) -- print message with my function
 end
 
 
