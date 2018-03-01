@@ -1,8 +1,8 @@
-local My_Thread_Handle = INVALID_THREAD_HANDLE -- set variable to  thread type
-local TOD_COUNTER = 0						   -- set variable
+local My_Thread_Handle = INVALID_THREAD_HANDLE	-- set variable to  thread type
+local TOD_COUNTER = 0				 -- set variable
 
-function mod_message(hud_text_msg)
-	mission_help_table(hud_text_msg, LOCAL_PLAYER)
+function mod_message(hud_text_msg)	-- create new function that will be show in game message
+	mission_help_table(hud_text_msg, LOCAL_PLAYER) -- in game function that shows text message 
 end
 
 
